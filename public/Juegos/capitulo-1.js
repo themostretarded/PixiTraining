@@ -28,3 +28,39 @@ para que el pixirenderer pueda ser mas eficiente
 let texture = PIXI.utils.TextureCache["image/anyImage.png"];
 let sprite = new PIXI.Sprite(texture);
 */
+/*como cargar las texturas o imagenes
+
+PIXI.loader
+    .add("laimagn.png")
+    .load(setup);
+function setup(){
+
+}
+el equipo de pixi recomienda crear el sprite refieriendo a la textura del objeto loader
+let sprite = new PIXI.Sprite(PIXI.loader.resources("laimagen").texture)
+
+PIXI.loader
+    .add("image.png")
+    .load(setup);
+function setup(){
+    let sprite = new PIXI.Sprite(PIXI.loader.resources("image.png").texture);
+}
+
+tambien se puede encadenar varias imagenes
+PIXI.loader
+    .add("imagen")
+    .add("imagen")
+    .add("imagen")
+    .add("imagen")
+    .load(setup);
+    segun esto tambien se puede encadenar metodos y se ejecutaran por metodos
+
+O puedes enlistar todos los archivos que quieres descargar en un solo metodo add
+PIXI.loader
+    .add([
+        "images/imagen.png",
+        "images/imagen.png",
+        "images/imagen.png"
+    ])
+    .load(setup);
+*/
