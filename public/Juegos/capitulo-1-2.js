@@ -2,6 +2,7 @@
 //mostrar un sprite
 
 //creamos el stage y el renderer
+
 let stage = new PIXI.Container(),
     renderer = PIXI.autoDetectRenderer(256, 256);
 document.body.appendChild(renderer.view);
@@ -46,7 +47,7 @@ loader
     .load(setup);
 
 function setup() {
-    //crearemo el sprite y añadiremos este al stage y lo rendereamos
+    //crearemos el sprite y añadiremos este al stage y lo rendereamos
     let pixie = new Sprite(resources["image/pixie96x48.png"].texture);
     stage.addChild(pixie);
     renderer.render(stage);
